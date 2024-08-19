@@ -25,14 +25,14 @@ function Lesson() {
         setPlan(data)
     }
     return(
-<main className="flex w-screen justify-end">
+<main className="flex justify-end w-[100svw] hide-scrollbar">
     <Aside data={setdata} />
-    <section className="flex flex-col border-2 m-0 border-black pt-2 rounded-md w-screen sm:w-[80vw] h-screen overflow-scroll hide-scrollbar gap-2 bg-gradient-to-tr from-sky-200 via-sky-400 to-sky-500 ">
+    <section className="flex flex-col border-2 m-0 border-black pt-2 rounded-md w-screen sm:w-[80vw] h-[calc(100vh-2.5lh)] overflow-scroll hide-scrollbar gap-2 bg-gradient-to-tr from-sky-200 via-sky-400 to-sky-500 ">
         { 
         JSON.stringify(lessonsData) === "{}"
         ?   <>
                 <h1 className="mx-3 font-semibold">loding Lessons</h1>
-                <div className="flex flex-col p-1 mx-3 border-2 border-black rounded-md bg-slate-300 text-3xl">{
+                <div className="flex flex-col p-1 mx-3 text-3xl border-2 border-black rounded-md bg-slate-300">{
                     [...Array(20)].map(()=><div className='flex items-center justify-between p-2 mx-2 my-1 border-2 border-black h-[1.5lh] rounded-md bg-slate-50 '></div>  )
                 
                 }</div>

@@ -10,7 +10,7 @@ function Aside ({data}){
     data(plan)
     
     return(<>
-        <aside className={`absolute sm:left-0 top-14 -left-32 flex flex-col items-center w-32 sm:w-[20vw] p-2 rounded-r-md border-r-2 h-screen text-black sm:translate-x-0 transform transition-transform overflow-scroll hide-scrollbar bg-gradient-to-tr from-sky-300 via-sky-400 to-sky-500 ${ show ? "translate-x-full" : "translate-x-0"}`}>
+        <aside className={`h-[calc(100svh-2.5lh)] absolute sm:left-0 top-14 -left-32 flex flex-col items-center w-32 sm:w-[20vw] p-2 rounded-r-md border-r-2 text-black sm:translate-x-0 transform transition-transform overflow-scroll hide-scrollbar bg-gradient-to-tr from-sky-300 via-sky-400 to-sky-500 ${ show ? "translate-x-full" : "translate-x-0"}`}>
             <RadioGroup value={plan} onClick={() => setShow(false)} onChange={setPlan} className="w-full rounded-md">
                 <RadioGroup.Label >learn <hr/></RadioGroup.Label>
                     {level.map((a)=>
